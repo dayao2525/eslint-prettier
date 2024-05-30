@@ -2,6 +2,9 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default withNuxt(
+  {
+    ignores: ['dist', '.nuxt', '.output']
+  },
   // your custom flat configs go here, for example:
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
